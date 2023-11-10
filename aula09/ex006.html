@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(175, 39, 39); 
+            color:aquamarine; 
+            font: normal 18pt Arial
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>vamo ser se esse DOM é tudo isso mesmo</h1>
+    <p class="testez">Olha só, dá pra criar parágrafo</p>
+    <p>Começar a usar esse tal de <strong>DOM</strong> agora em, vamo ver no que dá</p>
+    <div >e isso aqui é o que em</div> 
+    <script>
+        /*  var d = window.document.getElementById('testez')
+        d.style.background = 'green'
+        d.innerText = 'Estou indo...' */
+
+        /*  var d = window.document.getElementsByName('testez')[0]
+        d.innerText = 'Oi..'*/
+
+        /*  var d = window.document.getElementsByClassName('testez')[0]
+        d.innerText = 'esse é com classe' */
+
+        var d = window.document.querySelector('p.testez') /* Maneira mais fácil de selecionar */
+        d.style.background = 'green'
+        d.style.color = 'purple'
+
+
+
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>

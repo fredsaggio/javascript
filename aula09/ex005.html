@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: brown; 
+            color:aquamarine; 
+            font: normal 18pt Arial
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>vamo ser se esse DOM é tudo isso mesmo</h1>
+    <p>Olha só, dá pra criar parágrafo</p>
+    <p>Começar a usar esse tal de <strong>DOM</strong> agora em, vamo ver no que dá</p>
+    <div>e isso aqui é o que em</div> 
+    <div>outra só pra <strong>ver</strong> como fica</div>
+    <script>
+        var paragrafo = document.getElementsByTagName('div')[1]
+        document.write(`Aqui está o que você pediu "${paragrafo.innerText}"`)
+        paragrafo.style.color = 'gold'
+        var corpim = document.body
+        corpim.style.background = 'black' /* Você consegue usar uma variável para utilizar CSS */
+        alert(paragrafo.innerText) /* innerText copia só o texto, innerHTML copia tudo */
+    
+
+
+    </script>
+    
+</body>
+</html>
