@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,19 @@
     
 </head>
 <body>
+
     <script>
+        var salario = Number(window.prompt('Qual o seu salário?'))
+        document.write(`O seu salário é de R$${salario.toFixed(2).replace('.', ',')} reais.`)
+    </script>
+    
+    <!-- <script>12
         var nome = window.prompt('Qual é o seu nome?')
-        document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras<br/>`)
-        document.write(`Seu nome em letras minúsculas fica ${nome.toUpperCase()}<br/>`)
+        document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras<br>`)
+        document.write(`Seu nome em letras minúsculas fica ${nome.toUpperCase()} <br>`)
         document.write(`Seu nome em letras maiúsculas fica ${nome.toLowerCase()}`) /* Lembrar do BR ali e também da sintaxe com o ` */
 
 
-    </script>
+    </script> -->
 </body>
 </html>
