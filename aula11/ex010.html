@@ -16,15 +16,18 @@
 
     <script>
         function resultado(){
-            var input_pais = document.getElementById('ipais');
-            var input_pais_value = (input_pais.value);
-            var resultados = document.getElementById('res');
+            var input_pais = document.getElementById('ipais')
+            var input_pais_value = String(input_pais.value)
+            var resultados = document.getElementById('res')
 
-            if (input_pais_value == Brasil) {
-                resultados.innerHTML = `<p>Você é <ins>Brasileiro</ins>!</p>`
+            if (input_pais_value == 'Brasil') {
+                resultados.innerHTML = `<p>Você é <strong><em>Brasileiro</em></strong>!</p>`
+            } else {
+                resultados.innerHTML += `<p>Você é <strong><em>estrangeiro</em></strong>!</p>` 
+                /* o innerHTML em "HTML" deve ser tudo maiúsculo, caso contrário não irá funcionar. */
             }
             
-            resultados.innerHTML = `<p>Que legal que você mora em/na/no <strong>${input_pais_value}</strong>!</p>`
+            resultados.innerHTML += `<p>Que legal que você mora em/na/no <strong>${input_pais_value}</strong>!</p>`
             
 
             
