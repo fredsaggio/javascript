@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do ex008 de if else</title>
+</head>
+<body>
+    <h1>Testando países</h1>
+
+    <label for="ipais">País escolhido:</label> <input type="text" name="pais" id="ipais">
+    <input onclick="resultado()" type="button" value="Send">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function resultado(){
+            var input_pais = document.getElementById('ipais');
+            var input_pais_value = (input_pais.value);
+            var resultados = document.getElementById('res');
+
+            if (input_pais_value == Brasil) {
+                resultados.innerHTML = `<p>Você é <ins>Brasileiro</ins>!</p>`
+            }
+            
+            resultados.innerHTML = `<p>Que legal que você mora em/na/no <strong>${input_pais_value}</strong>!</p>`
+            
+
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    <h1>Sistema do Detran</h1>
+    <label for="ivel">Velocidade do carro:</label> <input type="number" name="vel" id="ivel">
+    <input onclick="calcular()" id="botao_calculo" type="button" value="Verify">
+    <div id="res">
+
+    </div>
+
+    <script>
+        
+        function calcular(){
+
+        var input_velocidade = document.getElementById('ivel');
+        var txt_velocidade = Number(input_velocidade.value);
+        var resolucao = document.getElementById('res')
+        
+        resolucao.innerHTML = `<p> Dirija sempre com <strong>cinto de segurança</strong> e com moderação!</p>`
+
+        if (txt_velocidade >= 80) {
+            resolucao.innerHTML += `<p>Você ultrapassou o limite de velocidade da pista, tá achando que tá num foguete é patrão?</p>`
+        }
+
+        resolucao.innerHTML += `<p>Sua velocidade atual é de <strong>${txt_velocidade}</strong> km/h! </p>`
+
+        }
+
+    </script>
+</body>
+</html>
