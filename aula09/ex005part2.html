@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body{
-            background-color: brown; 
+            background-color: rgb(56, 56, 215); 
             color:aquamarine; 
             font: normal 18pt Arial
         }
@@ -19,29 +19,30 @@
         <h1>vamo ser se esse DOM é tudo isso mesmo</h1>
         
         <p>Olha só, dá pra criar parágrafo</p>
+        
         <p>
             Começar a usar esse tal de <strong>DOM</strong> agora em, vamo ver no que dá
         </p>
         
-        <div>e isso aqui é o que em</div>
+        <div class="burguer">e isso <strong>aqui</strong> é o que em</div>
         
     </section>
 
 
     <script>
 
-        var paragrafo = document.getElementsByTagName('div')[1]
+        var paragrafo = document.querySelector('div.burguer');
 
-        document.write(`Aqui está o que você pediu "${paragrafo.innerText}"`)
+        document.write(`Aqui está o que você pediu: ${paragrafo.innerHTML}`);
         
-        paragrafo.style.color = 'gold'
+        paragrafo.style.color = 'gold';
 
 
-        var corpim = document.body
+        var corpo = document.body;
 
-        corpim.style.background = 'black' /* Você consegue usar uma variável para utilizar CSS */
+        corpo.style.background = 'black' /* Você consegue usar uma variável para utilizar CSS */
 
-        alert(paragrafo.innerText) /* innerText copia só o texto, innerHTML copia tudo */
+        /* alert(paragrafo.innerText)  */
 
     </script>
 </body>

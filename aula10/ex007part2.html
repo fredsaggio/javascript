@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Testando function</title>
+</head>
+<body>
+    <div class="container">Interagindo...</div> 
+</body>
+
+<script>
+
+        var click = document.querySelector('div.container')
+        click.addEventListener('click', function(){
+            click.innerHTML = 'Clicou!'
+            click.style.background = 'red'
+        }) 
+    
+
+        var entra = document.querySelector('div.container')
+        entra.addEventListener('mouseover', function(){
+            entra.innerHTML = 'Entrou!'
+            entra.style.background = 'blue'
+        })                  
+        
+
+    
+
+        var saiu = document.querySelector('div.container')
+        saiu.addEventListener('mouseout', function(){
+            saiu.innerHTML = 'saiu meno, sinistro!'
+            saiu.style.background = 'green'
+        })
+        
+    
+</script>
+</html>
