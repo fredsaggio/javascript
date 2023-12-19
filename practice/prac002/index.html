@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Horas do dia</title>
+    <title>Practice 2 javaScript</title>
 </head>
 <body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Verificador de idade</h1>
     </header>
 
-    <main>
-        <div id="horario">
-            
+    <main >
+        <div id="container1">
+            <label id="label_ano_nascimento" for="ianonasc">Ano de nascimento:</label>
+            <input type="number" name="anonasc" id="ianonasc"> <br>
+        </div>
+
+        <div id="container2">
+            <span>Sexo:</span> <label for="imasc">Masculino:</label> <input type="radio" name="genre" id="imasc">
+            <label for="ifem">Feminino:</label> <input type="radio" name="genre" id="ifem">
+        </div>
+
+        <div id="container3">
+            <input onclick="aoclicar()" type="button" value="Verify">
         </div>
 
         <div id="imagem">
-            <img src="imagens/F1CMAB3XoAENnXI.jfif" alt="gato indo tomar banho">
+            <img src="" alt="">
         </div>
-    </main>
+    </main> 
 
     <footer>
-        &copy; @Fredzin
+
     </footer>
 
     <script src="script.js"></script>
+</body>
 </html>
