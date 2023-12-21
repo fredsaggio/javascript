@@ -3,32 +3,32 @@ function verificar() {
     var anoatual = data.getFullYear();
 
     var caixanumber = document.getElementById('itxtano');
+    var fsex = document.getElementsByName('radsex')
     var res = document.getElementById('container2');
     var idade = anoatual - caixanumber.value
-    
-    var genero = ''
-    var fsex = document.getElementsByName('radsex')
 
-    var imagem = document.getElementById('imagem')
+    var genero = ''
 
     res.innerHTML = `Sua idade é igual a ${idade}`
 
-
-    if (caixanumber.value.length == 0 || Number(caixanumber.value) > anoatual) {
+    if (caixanumber.value.length == 0 || Number(caixanumber.value) > anoatual || caixanumber.value >=0 && caixanumber.value < 1900) {
         res.innerHTML = `<p>Idade <ins>inválida</ins></p>`
 } else {
+    var imagem = document.createElement('img')
+    imagem.setAttribute('id', 'foto')
+    
     if (fsex[0].checked) {
 
         genero = 'Homem'
 
         if (idade >= 0 && idade < 10) {
-            imagem.src = '../imagens/homem-criança.jpg'
+            imagem.setAttribute('src', 'homem-criança.jpg')
         } else if (idade < 21) {
-            imagem.src = '../imagens/homem-jovem.jpg'
+            imagem.setAttribute('src', 'homem-jovem.jpg')
         } else if (idade < 50) {
-            imagem.src = '../imagens/homem-adulto.jpg'
+            imagem.setAttribute('src', 'homem-adulto.jpg')
         } else {
-            imagem.src = '../imagens/homem-idoso.jpg'
+            imagem.setAttribute('src', 'homem-idoso.jpg')
         }
 
     } else {
@@ -37,18 +37,21 @@ function verificar() {
             genero = 'Mulher'
 
             if (idade >= 0 && idade < 10) {
-                imagem.src = '../imagens/mulher-criança.jpg'
+                imagem.setAttribute('src', 'mulher-criança.jpg')
             } else if (idade < 21) {
-                imagem.src = '../imagens/mulher-jovem.jpg'
+                imagem.setAttribute('src', 'mulher-jovem.jpg')
             } else if (idade < 50) {
-                imagem.src = '../imagens/mulher-adulta.jpg'
+                imagem.setAttribute('src', 'mulher-adulta.jpg')
             } else {
-                imagem.src = '../imagens/mulher-idosa.jpg'
+                imagem.setAttribute('src', 'mulher-idosa.jpg')
             }
         }
     }
 
-res.innerHTML = `<p>Detectamos ${genero} com ${idade} anos.</p>`
+    res.style.textAlign = 'center'
+    res.innerHTML = `<p>Detectamos ${genero} com ${idade} anos.</p>`
+    res.appendChild(imagem)
+    
 
 } 
 
