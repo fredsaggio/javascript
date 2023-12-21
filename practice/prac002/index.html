@@ -12,23 +12,27 @@
     </header>
 
     <section>
-        <div>
-            <p>Ano de Nascimento:
+        <div id="container1">
+            <p id="paragrafo1" class="div1paragrafo">Ano de Nascimento:
                 <input type="number" name="txtano" id="itxtano" required min="1900" max="2023">
             </p>
 
-            <p>Sexo:
+            <p id="paragrafo2" class="div1paragrafo">Sexo:
                 <input type="radio" name="radsex" id="Masculino" checked>
                 <label for="Masculino">Masculino</label> 
                 <input type="radio" name="radsex" id="Feminino">
                 <label for="Feminino">Feminino</label>
             </p>
 
-            <input onclick="verificar()" type="button" value="Verificar">
+            <p id="paragrafo3" class="div1paragrafo"><input onclick="verificar()" type="button" value="Verificar"></p>
         </div>
 
-        <div>
+        <div id="container2">
             <p>Preencha os dados acima para ver o resultado</p>
+        </div>
+
+        <div id="container3">
+            <img id="imagem" src="../imagens/mulher-idosa.jpg" alt="">
         </div>
     </section>
 
