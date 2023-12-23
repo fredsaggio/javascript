@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Testando repetições</h1>
+        <h1>Tabuada digital</h1>
     </header>
 
     <main>
         <section>
             <div>
+                <label for="itabuada">Tabuada:</label> <input type="number" name="tabuada" id="itabuada">
+                <input type="button" value="Gerar tabuada" onclick="tabuada()">
             </div>
             <div>
+                <select name="seltabu" id="iseltabu">
+                    <option value="valor1">Opção 1</option>
+                    <option value="value2">Opção 2</option>
+                </select>
             </div>
         </section>
     </main>
