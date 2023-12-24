@@ -15,11 +15,16 @@ function somar() {
 
         res.innerHTML = 'Seus passos: <br>'
 
+        if (passocountvalue <= 0) {
+            window.alert('valor não aceito.')
+            passocountvalue = 1
+        }
+
         if (iniciocountvalue < fimcountvalue) {
 
             for(let calc = iniciocountvalue; calc <= fimcountvalue; calc += passocountvalue) {
 
-                res.innerHTML += `<p>${calc} \u{1F449}</p>`
+                res.innerHTML += `${calc.toFixed(2)} \u{1F449}`
                 
         } }
             
@@ -27,7 +32,7 @@ function somar() {
 
             for (let calc = iniciocountvalue; calc >= fimcountvalue; calc -= passocountvalue) {
 
-                res.innerHTML += `<p>${calc} \u{1F449}</p>`
+                res.innerHTML += `${calc.toFixed(2)} \u{1F449}`
             }
         } 
         
