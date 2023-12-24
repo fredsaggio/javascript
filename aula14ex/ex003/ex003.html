@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contador do Fred</title>
+</head>
+<body>
+    <header>
+        <h1>Contador do Fred</h1>
+    </header>
+
+    <main>
+        <section>
+            <div id="container1">
+
+                <label for="iinicio">Inicio:</label> <input type="number" name="inicio" id="iinicio">
+                <label for="ifim">Fim:</label> <input type="number" name="fim" id="ifim">
+                <label for="ipasso">Passo:</label> <input type="number" name="passo" id="ipasso">
+
+                <input type="button" value="Contar" onclick="somar()">
+
+            </div>
+
+            <div id="container2">
+                Esperando a contagem...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Criado por Fred
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
