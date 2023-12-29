@@ -1,7 +1,10 @@
-let valorarray = [2, 1, 3, 4, 5]
+let num = [0, 2, 1, 4, 5, 6]
 
-valorarray.sort()
+num.sort()
 
-for (let pos in valorarray) {
-    console.log(`${valorarray.} ${pos}`)
+for(let pos = 0; pos < num.length; pos++) {
+    
+    console.log(`A posição ${pos} tem o valor ${num[pos]}`)
 }
+
+console.log(`O vetor tem ${num.length} elementos`)
