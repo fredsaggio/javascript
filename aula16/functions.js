@@ -6,5 +6,4 @@ function parimp(n) {
     }
 }
 
-/* let res = parimp(3) */
-console.log(parimp(222))
+console.log(parimp(5))
