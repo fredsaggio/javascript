@@ -9,3 +9,4 @@ function fatorial(n) {
 console.log(fatorial(4))
 
 /* n! = n * (n-1)! */
+

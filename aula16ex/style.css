@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #468eec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.504);
+}
+
+main {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 500px;
+    height: 40%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.32);
+    padding: 5px;
+}
+
+div#container1 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+    height: 70%;
+}
+
+div#container1 label {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    
+}
+
+div#container1 input[type=number] {
+    grid-column: 6/7;
+    grid-row: 2/3;
+    height: 22px;
+}
+
+div#container1 input#button1 {
+    grid-column: 7/8;
+    grid-row: 2/3;
+    height: 22px;
+}
+
+div#container1 input#button2 {
+    grid-row: 4/5;
+    grid-column: 3/7;
+    height: 30px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+div#container1 select {
+    grid-row: 3/4;
+    grid-column: 3/7;
+}
+
+div#container1 option {
+    text-align: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
