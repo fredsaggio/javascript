@@ -8,12 +8,11 @@ function adicionar() {
 
         let selectt = document.getElementById('itextonumero')
         let teste4 = document.createElement('option')
-        let arrayvalores = []
         let teste2 = Number(numbervalue.value)
-
+        let arrayvalores = [];
 
         arrayvalores.push(teste2)
-
+                    
         teste4.text = `O valor ${arrayvalores} foi adicionado.`
         selectt.appendChild(teste4)
       
@@ -21,13 +20,18 @@ function adicionar() {
     }
 
     function finalizar() {
-        let sectionbox = document.getElementById('containerfirst')
         let selectt = document.getElementById('itextonumero')
+        let divresultado = document.getElementById('container2')
 
         if (selectt.options.length == 1) {
 
             alert('Adicione algum valor!')
 
         } else {
+
+            for(let n = 1, let bras = arrayvalores[n]; n ) {
+
+            }
         }
+        
     }
