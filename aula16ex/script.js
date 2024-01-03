@@ -26,7 +26,6 @@ function inLista(n, l) {
     }
     
     Código igual o de cima porém utilizando if/else*/
-
 }
 
 function adicionar() {
@@ -34,6 +33,7 @@ function adicionar() {
     if (isNumero(num.value) && !inLista(num.value, valores)) {
 
         valores.push(Number(num.value))
+
         let item = document.createElement('option')
         item.text = `O valor ${num.value} foi adicionado.`
         lista.appendChild(item)
@@ -45,7 +45,6 @@ function adicionar() {
 
     num.value = '' /* Eu tinha colocado num.innerHTML, mas é num.value */
     num.focus()
-
 }
 
 
@@ -57,35 +56,29 @@ function finalizar() {
     } else {
 
         function somarArray(array) {
+            
             return array.reduce(function (acumulador, elemento) {
                 return acumulador + elemento
             })
         }
 
         function calcMedia(arraydois) {
+
             const soma = arraydois.reduce(function (acumulador, elemento) {
                 return acumulador + elemento 
-                })
-
-                return soma / arraydois.length
-            }
+            })    
+                 
+            return soma / arraydois.length
         }
-        
-        const media = calcMedia(valores)
-
-        const maiorValor = Math.max(...valores)
-
-        const menorValor = Math.min(...valores)
-
-        res.innerHTML = `A soma de todos dá: ${somarArray(valores)} <br> <br>`
-
-        res.innerHTML += `O maior valor é o: ${maiorValor} <br> <br>`
-
-        res.innerHTML += `O menor valor é o: ${menorValor} <br> `
-
-        res.innerHTML += `A média dos valores é: ${media}`
-
-        
-
     }
+        
+    const media = calcMedia(valores)
+    const maiorValor = Math.max(...valores)
+    const menorValor = Math.min(...valores)
+
+    res.innerHTML = `A soma de todos dá: ${somarArray(valores)} <br> <br>`
+    res.innerHTML += `O maior valor é o: ${maiorValor} <br> <br>`
+    res.innerHTML += `O menor valor é o: ${menorValor} <br> <br> `
+    res.innerHTML += `A média dos valores é: ${media}`
 }
+
