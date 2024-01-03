@@ -1,4 +1,4 @@
-/* JEITO 1 DE SE FAZER ESTE CÓDIGO MUDANDO A LÓGICA DE PROGRAMAÇÃO NA FUNCTION FINALIZAR. */
+/* JEITO 2 DE SE FAZER ESTE CÓDIGO MUDANDO A LÓGICA DE PROGRAMAÇÃO NA FUNCTION */
 
 let num = document.querySelector('input#inumero')
 let lista = document.getElementById('itextonumero')
@@ -39,7 +39,6 @@ function adicionar() {
         let item = document.createElement('option')
         item.text = `O valor ${num.value} foi adicionado.`
         lista.appendChild(item)
-        res.innerHTML = ''
         
 
     } else {
@@ -49,7 +48,7 @@ function adicionar() {
     num.value = '' /* Eu tinha colocado num.innerHTML, mas é num.value */
     num.focus()
 
-    
+    res.innerHTML = ''
 }
 
 
@@ -61,41 +60,41 @@ function finalizar() {
     } else {
 
         let sectionaumentar = document.getElementById('containerfirst')
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        let totall = valores.length
 
-        sectionaumentar.style.height = 'calc(40% + 200px)'
+        for(let pos in valores) {
+            soma += valores[pos] 
+            if (valores[pos] > maior) { /* Tem que ficar atento com a lógica, eu só não coloquei o <= ou >= porque o valor só vai de 1 a 100 e não tem como ser igual a 0 para ter essa possibilidade. */
+                maior = valores[pos]
+            }
+            if (valores[pos] < menor) {
+                menor = valores[pos]
+            }
 
-        function somarArray(array) {
+            media = soma / totall
 
-            return array.reduce(function (acumulador, elemento) {
-                return acumulador + elemento
-            })
+            
         }
 
-        function calcMedia(arraydois) {
+        sectionaumentar.style.height = 'calc(40% + 250px)'
+        
 
-            const soma = arraydois.reduce(function (acumulador, elemento) {
-                return acumulador + elemento 
-            })    
-                 
-            return soma / arraydois.length
-        }
-
-        const media = calcMedia(valores)
-        const maiorValor = Math.max(...valores)
-        const menorValor = Math.min(...valores)
-
-        res.innerHTML = `<p>A soma de todos dá: ${somarArray(valores)}</p>`
-        res.innerHTML += `<p>O maior valor é o: ${maiorValor}</p>`
-        res.innerHTML += `<p>O menor valor é o: ${menorValor}</p>`
+        res.innerHTML = `<p> Foram um total de ${valores.length} números. </p>`
+        res.innerHTML += `<p>A soma de todos dá: ${soma}</p>`
+        res.innerHTML += `<p>O maior valor é o: ${maior}</p>`
+        res.innerHTML += `<p>O menor valor é o: ${menor}</p>`
         res.innerHTML += `<p>A média dos valores é: ${media}</p>`
 
         let testandooo = document.body
 
         testandooo.style.background = 'purple'
 
-    }
         
-    
 
+    }
 }
 
