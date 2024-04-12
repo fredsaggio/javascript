@@ -77,9 +77,8 @@ function finalizar() {
 
             media = soma / totall
 
-            
         }
-
+        
         sectionaumentar.style.height = 'calc(40% + 250px)'
         
 
